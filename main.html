@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHM STORE</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .Container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .menu-button, .email-button, .search, .share{
+            position: absolute;
+            top: 24px;
+           
+            width: 50px;
+            height: 50px;
+            z-index: 1000;
+        }
+        .menu-button{
+            left: 25%;
+        }
+        .email-button{
+            left: 28%;
+        }
+        .search{
+            left: 74%;
+        }
+        .share{
+            left: 77%;
+        }
+        
+        /* Responsive Styles */
+        @media only screen and (max-width: 768px) {
+            .Container {
+                padding: 10px;
+            }
+            
+            .menu-button, .email-button, .search, .share {
+                left: 10px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        
+        @media only screen and (max-width: 470px) {
+            .Container {
+                padding: 5px;
+            }
+            
+            .menu-button, .email-button, .search, .share {
+                left: 5px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        
+        /* Additional Responsive Styles */
+        @media only screen and (max-width: 1200px) {
+            section {
+                padding: 20px;
+            }
+        }
+        
+        @media only screen and (max-width: 768px) {
+            section {
+                padding: 10px;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            section {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <header class="Container">
+    <img src="Image/banner-img (1).jpg" alt="Banner image">
+    <div class="center">
+        <img src="Image/logo.png" alt="Logo" style="display: inline-block; position: absolute; top: 18px; left: 40%;">
+    </div>
+    <div class="header-buttons">
+        <a href="#" onclick="toggleSidebar()">
+            <img src="Image\download menu button.jpg" alt="Menu Button" class="menu-button">
+        </a>
+        <a href="">
+            <img src="Image/Blue Email.png" alt="Email" class="email-button">
+        </a>
+        <a href="">
+            <img src="Image/search.png" alt="search" class="search">
+        </a>
+        <a href="">
+            <img src="Image/share.jpeg" alt="share" class="share">
+        </a>
+    </div>
+</header>
+    
+    <!-- Sidebar -->
+    <div id="sidebar" style="display: none; position: absolute; top: 0; left: 0; width: 250px; height: 100vh; background-color: #fff; z-index: 1000;">
+        
+        <img src="Image/sidebar.png" alt="Sidebar Image">
+    </div>
+    
+    <main>
+        <section>
+            <h2 class="center" style="color: orange;">INSIGHTS</h2>
+            <h3 class="center">SHM STORE <a href="#" style="color: darkblack;">Marketplace Insights</a></h3>
+            <p class="center">Our extensive network of delivery centers across multiple locations, ensure fast and reliable delivery of products to our customers.</p>
+        </section>
+        <section>
+            <h2 class="center" style="color: orange;">OUR SERVICES</h2>
+            <div class="center">
+                <img src="Image\Insights.jpg" alt="service icon">
+                <h4>Service 1</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </div>
+          
+            <div class="center">
+                <img src="Image\F97E3234.png" alt="service icon">
+                <h4>Service 2</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            </div>
+        </section>
+        <section>
+            <h2 class="center" style="color: orange;">OUR TEAM</h2>
+            <div class="center">
+                <img src="Image/team-member1.jpg" alt="team member">
+                <h4>John Doe</h4>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="center">
+                <img src="Image/team-member2.jpg" alt="team member">
+                <h4>Jane Doe</h4>
+                <p>CTO & Co-Founder</p>
+            </div>
+            <div class="center">
+                <img src="Image/team-member3.jpg" alt="team member">
+                <h4>Bob Smith</h4>
+                <p>Marketing Manager</p>
+            </div>
+        </section>
+        <section style="text-align: center;">
+            <h2 style="color: orange;">CONTACT US</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <input type="submit" value="Send" style="display: block; margin: 0 auto;">
+            </form>
+        </section>
+    <footer class="Container">
+        <section>
+            <h2 class="center" style="color: orange;">GET IN TOUCH</h2>
+            <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+            <div class="center">
+                <a href="#" style="color: darkblack;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#" style="color: darkblack;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" style="color: darkblack;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </section>
+        <section>
+            <h2 class="center" style="color: orange;">NEWSLETTER</h2>
+            <footer class="Container">
+                <section>
+                    <!-- <h2 class="center" style="color: orange;">GET IN TOUCH</h2>
+                    <p class="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+                    <div class="center">
+                        <a href="#" style="color: darkblack;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" style="color: darkblack;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" style="color: darkblack;"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </div> -->
+                </section>
+                <!-- <section>
+                    <h2 class="center" style="color: orange; text-align: center; ">NEWSLETTER</h2>
+                    <form style="position: absolute; ">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </section>-->
+                <section>
+                    <h2 class="center" style="color: orange;">COPYRIGHT</h2>
+                    <p class="center">&copy; 2023 SHM STORE. All rights reserved.</p>
+                </section> 
+
+                <section>
+                    <div class="center">
+                        <img src="Image/fter.png" alt="" class="ftr">
+                    </div>
+                </section>
+            </footer>
+            
+            <script>
+                function toggleSidebar() {
+                    var sidebar = document.getElementById("sidebar");
+                    if (sidebar.style.display === "none" || sidebar.style.display === "") {
+                        sidebar.style.display = "block";
+                    } else {
+                        sidebar.style.display = "none";
+                    }
+                }
+            </script>
+            
+            </body>
+            </html>
